@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mojatax/screens/home_page.dart';
+import 'package:mojatax/screens/tabs/salesTab.dart';
 import 'package:mojatax/widgets/tabBar_widget.dart';
+
+import 'tabs/dashboardTab.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -15,15 +18,13 @@ class _MainPageState extends State<MainPage> {
     return TabBarWidget(
       title: "MOJATAX",
       tabs: const [
-        Tab(
-          text: 'Dashboard',
-        ),
+        Tab(text: 'Dashboard'),
         Tab(text: 'Sales'),
         Tab(text: 'My Details'),
       ],
       children: [
-        const HomePage(),
-        Container(),
+        const DashboardTab(),
+        const SalesTab(),
         Container(),
       ],
     );

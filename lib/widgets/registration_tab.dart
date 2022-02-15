@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TabBarWidget extends StatelessWidget {
-  final String title;
+class RestrationTab extends StatelessWidget {
   final List<Tab> tabs;
   final List<Widget> children;
 
-  const TabBarWidget({
+  const RestrationTab({
     Key? key,
-    required this.title,
     required this.tabs,
     required this.children,
   }) : super(key: key);
@@ -17,32 +15,18 @@ class TabBarWidget extends StatelessWidget {
         length: tabs.length,
         child: Scaffold(
           appBar: AppBar(
-            toolbarHeight: 30,
-            actions: [
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.menu,
-                    color: Colors.black,
-                  ))
-            ],
-            title: Text(
-              title,
-              style: const TextStyle(color: Colors.black),
-            ),
-            centerTitle: true,
+            toolbarHeight: 10,
             flexibleSpace: Container(
               decoration: const BoxDecoration(color: Colors.yellowAccent),
             ),
             bottom: TabBar(
               labelColor: Colors.black,
-              isScrollable: true,
+              // isScrollable: true,
               indicatorColor: Colors.black,
               indicatorWeight: 5,
               tabs: tabs,
             ),
             elevation: 5,
-            titleSpacing: 10,
           ),
           body: TabBarView(children: children),
         ),
