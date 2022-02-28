@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: 
   otp_text_field: ^1.1.2
   badges: ^2.0.2
+  qr_flutter: ^4.0.0
 
 
 dev_dependencies:

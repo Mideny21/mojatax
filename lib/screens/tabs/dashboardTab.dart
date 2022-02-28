@@ -510,11 +510,16 @@ class _DashboardTabState extends State<DashboardTab> {
                   left: 0,
                   bottom: 7,
                   height: 74,
-                  child: Container(
-                    alignment: Alignment.bottomLeft,
-                    decoration: const BoxDecoration(
-                      color: Colors.yellow,
-                      shape: BoxShape.circle,
+                  child: GestureDetector(
+                    onTap: () {
+                      _openDialog();
+                    },
+                    child: Container(
+                      alignment: Alignment.bottomLeft,
+                      decoration: const BoxDecoration(
+                        color: Colors.yellow,
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
                 ),
@@ -525,4 +530,34 @@ class _DashboardTabState extends State<DashboardTab> {
       ],
     );
   }
+
+  Future _openDialog() => showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+            insetPadding: const EdgeInsets.all(0.0),
+            elevation: 20.0,
+            backgroundColor: Colors.black,
+            content: Container(
+              height: MediaQuery.of(context).size.height * 0.10,
+              width: MediaQuery.of(context).size.width * 0.20,
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(40.0)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "VAT Amount:",
+                    style: TextStyle(
+                        color: Colors.yellow, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    "Payable:",
+                    style: TextStyle(
+                        color: Colors.yellow, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+          ));
 }

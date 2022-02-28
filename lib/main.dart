@@ -6,8 +6,12 @@ import 'package:mojatax/screens/home_page.dart';
 import 'package:mojatax/screens/main_page.dart';
 import 'package:mojatax/widgets/tabBar_widget.dart';
 
+import 'details/my_details.dart';
 import 'screens/Authentications/registration/registration_page.dart';
 import 'screens/SalesSection/payments.dart';
+import 'screens/payments/bill_screen.dart';
+import 'screens/tabs/dashboardTab.dart';
+import 'zreport/z_report.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +40,7 @@ class MyApp extends StatelessWidget {
             child: widget!,
           );
         },
-        home: const RegistrationPage(),
+        home: const ZReport(),
       ),
     );
   }

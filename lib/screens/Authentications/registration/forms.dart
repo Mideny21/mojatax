@@ -288,21 +288,32 @@ class _RegistationFormState extends State<RegistationForm> {
                 const SizedBox(height: 18),
                 Notes("Click download button to donwload filled form to sign"),
                 const SizedBox(height: 20),
-                Center(
-                  child: Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      borderRadius: BorderRadius.all(Radius.circular(
-                              5.0) //                 <--- border radius here
-                          ),
-                      border: Border.all(color: Colors.black, width: 5.0),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.6,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Download",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
                     ),
-                    child: Center(
-                      child: Text("Download"),
-                    ),
+                    style: ButtonStyle(
+                        side: MaterialStateProperty.all(
+                            BorderSide(width: 1.0, color: Colors.black)),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.yellow),
+                        foregroundColor:
+                            MaterialStateProperty.all(Colors.black),
+                        padding: MaterialStateProperty.all(EdgeInsets.all(14)),
+                        textStyle: MaterialStateProperty.all(TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700))),
                   ),
-                )
+                ),
+                const SizedBox(height: 20),
               ],
             ),
           ),
