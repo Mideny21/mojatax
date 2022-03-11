@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
             child: widget!,
           );
         },
-        home: const ZReport(),
+        home: const MainPage(),
       ),
     );
   }

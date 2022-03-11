@@ -13,17 +13,20 @@ class SaleDetails extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(8, 12, 8, 4),
         child: Container(
           decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(15)),
+            borderRadius: BorderRadius.all(Radius.circular(10)),
             color: Colors.black,
           ),
           height: 55,
           child: Center(
-              child: Text(
-            text!,
-            style: const TextStyle(
-                color: Colors.yellow,
-                fontSize: 17,
-                fontWeight: FontWeight.bold),
+              child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              text!,
+              style: const TextStyle(
+                  color: Colors.yellow,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold),
+            ),
           )),
         ),
       ),
