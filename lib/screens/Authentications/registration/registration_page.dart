@@ -21,9 +21,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
           icon: Container(
             height: 30,
             width: 30,
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.black),
-            child: Center(
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle, color: Colors.black),
+            child: const Center(
               child: Text(
                 "1",
                 style: TextStyle(color: Colors.white),
@@ -37,9 +37,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
           icon: Container(
             height: 30,
             width: 30,
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.black),
-            child: Center(
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle, color: Colors.black),
+            child: const Center(
               child: Text(
                 "2",
                 style: TextStyle(color: Colors.white),
@@ -49,7 +49,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
         ),
         // Tab(text: 'My Details'),
       ],
-      children: [const RegistationForm(), const AttachmentsForm()],
+      children: const [RegistationForm(), AttachmentsForm()],
     );
   }
 }

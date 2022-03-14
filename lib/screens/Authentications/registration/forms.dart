@@ -25,7 +25,7 @@ class _RegistationFormState extends State<RegistationForm> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Business Name",
                       style: TextStyle(
                           fontSize: 20,

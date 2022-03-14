@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mojatax/screens/SalesSection/payments.dart';
-import 'package:mojatax/widgets/custom_appBar.dart';
 
 class NationalIdPage extends StatefulWidget {
   const NationalIdPage({Key? key}) : super(key: key);

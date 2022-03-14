@@ -19,7 +19,7 @@ class _ZReportState extends State<ZReport> {
             padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
-                Text("*** START OF LEGAL RECEIPT ***",
+                const Text("*** START OF LEGAL RECEIPT ***",
                     style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Image.asset("assets/images/tra.jpg",

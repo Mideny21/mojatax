@@ -18,15 +18,15 @@ class Notes extends StatelessWidget {
             Container(
               height: 24,
               width: 24,
-              decoration:
-                  BoxDecoration(color: Colors.black, shape: BoxShape.circle),
-              child: Icon(Icons.check, color: Colors.white),
+              decoration: const BoxDecoration(
+                  color: Colors.black, shape: BoxShape.circle),
+              child: const Icon(Icons.check, color: Colors.white),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: Text(
                 text!,
-                style: TextStyle(
+                style: const TextStyle(
                     overflow: TextOverflow.ellipsis,
                     color: Colors.black,
                     fontWeight: FontWeight.w400),

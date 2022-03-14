@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mojatax/screens/SalesSection/payments.dart';
-import 'package:mojatax/widgets/custom_appBar.dart';
 
 class DrivingLicenses extends StatefulWidget {
   const DrivingLicenses({Key? key}) : super(key: key);

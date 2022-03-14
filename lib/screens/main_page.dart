@@ -1,5 +1,6 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:mojatax/screens/home_page.dart';
 import 'package:mojatax/screens/tabs/salesTab.dart';
 import 'package:mojatax/widgets/tabBar_widget.dart';
 
@@ -15,18 +16,51 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return TabBarWidget(
-      title: "MOJATAX",
-      tabs: const [
-        Tab(text: 'Dashboard'),
-        Tab(text: 'Sales'),
-        Tab(text: 'My Details'),
-      ],
-      children: [
-        const DashboardTab(),
-        const SalesTab(),
-        Container(),
-      ],
-    );
+    // bool isHandset = (Platform.isIOS || Platform.isAndroid) &&
+    //     MediaQuery.of(context).size.width < 700;
+
+    // bool desktop = (Platform.isWindows || Platform.isMacOS);
+
+    bool isDesktop(BuildContext context) =>
+        MediaQuery.of(context).size.width >= 700;
+
+    if (isDesktop(context) || Platform.isWindows) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text("self"),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
+              ),
+              ListTile(
+                title: const Text('Item 1'),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
+      );
+    } else {
+      return TabBarWidget(
+        title: "MOJATAX",
+        tabs: const [
+          Tab(text: 'Dashboard'),
+          Tab(text: 'Sales'),
+          Tab(text: 'My Details'),
+        ],
+        children: [
+          const DashboardTab(),
+          const SalesTab(),
+          Container(),
+        ],
+      );
+    }
   }
 }
