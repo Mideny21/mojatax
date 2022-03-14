@@ -206,12 +206,17 @@ class _SalesDesktopState extends State<SalesDesktop> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Center(
-                            child: Text(
-                              "Payments",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold),
+                            child: InkWell(
+                              onTap: () {
+                                _openSmallDialog();
+                              },
+                              child: Text(
+                                "Payments",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
                         ),
@@ -270,6 +275,31 @@ class _SalesDesktopState extends State<SalesDesktop> {
       ),
     );
   }
+
+  Future _openSmallDialog() => showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+            // insetPadding: const EdgeInsets.all(20.0),
+            contentPadding: const EdgeInsets.all(12.0),
+            // title: const Text("User Input"),
+            elevation: 20.0,
+            backgroundColor: Colors.grey[800],
+            content: SingleChildScrollView(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                PaymentsOptions(text: "Cash"),
+                SizedBox(height: 10),
+                PaymentsOptions(text: "Cheque"),
+                SizedBox(height: 10),
+                PaymentsOptions(text: "CCard"),
+                SizedBox(height: 10),
+                PaymentsOptions(text: "EMoney"),
+                SizedBox(height: 10),
+                PaymentsOptions(text: "Invoice"),
+              ],
+            )),
+          ));
 
   Future _openDialog() => showDialog(
       context: context,
@@ -468,4 +498,28 @@ class _SalesDesktopState extends State<SalesDesktop> {
               ),
             ),
           ));
+}
+
+class PaymentsOptions extends StatelessWidget {
+  PaymentsOptions({Key? key, this.text}) : super(key: key);
+  String? text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.width * 0.03,
+      width: MediaQuery.of(context).size.width * 0.16,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(width: 1.0, color: Colors.yellow),
+        color: Colors.black54.withOpacity(0.4),
+      ),
+      child: Center(
+        child: Text(
+          text!,
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
 }
