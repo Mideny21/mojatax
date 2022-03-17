@@ -26,7 +26,7 @@ class _DesktopDetailsState extends State<DesktopDetails> {
               height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.grey[900],
+                color: Colors.grey[800],
               ),
               child: SingleChildScrollView(
                 child: Column(

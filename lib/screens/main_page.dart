@@ -7,6 +7,7 @@ import 'package:mojatax/widgets/tabBar_widget.dart';
 import 'desktop_sales.dart/my_details.dart';
 import 'desktop_sales.dart/sales_desktop.dart';
 import 'desktop_sales.dart/sales_report.dart';
+import 'desktop_sales.dart/transaction_page.dart';
 import 'tabs/dashboardTab.dart';
 
 class MainPage extends StatefulWidget {
@@ -25,7 +26,7 @@ class _MainPageState extends State<MainPage> {
     const SalesTab(),
   ];
 
-  var title = ["Dashboard", 'Sales', 'My Details'];
+  var title = ["Dashboard", 'Sales', 'My Details', 'Buy Transactions'];
 
   @override
   Widget build(BuildContext context) {
@@ -96,6 +97,11 @@ class _MainPageState extends State<MainPage> {
                       selectedIcon: Icon(Icons.person_pin_rounded),
                       label: Text('MY DETAILS'),
                     ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.shopping_cart),
+                      selectedIcon: Icon(Icons.shopping_cart),
+                      label: Text('BUY TRANSACTION'),
+                    ),
                   ],
                 ),
                 Expanded(
@@ -130,6 +136,8 @@ class _MainPageState extends State<MainPage> {
         return SalesTab();
       case 2:
         return DesktopDetails();
+      case 3:
+        return TransactionPage();
     }
   }
 }

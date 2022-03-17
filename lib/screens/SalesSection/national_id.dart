@@ -13,7 +13,7 @@ class _NationalIdPageState extends State<NationalIdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "National ID",
           style:
               const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -34,7 +34,7 @@ class _NationalIdPageState extends State<NationalIdPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Buyer's Name",
                     style: TextStyle(
                         fontSize: 20,
@@ -71,7 +71,7 @@ class _NationalIdPageState extends State<NationalIdPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Buyer's Email",
                     style: TextStyle(
                         fontSize: 20,
@@ -108,7 +108,7 @@ class _NationalIdPageState extends State<NationalIdPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Buyer's Mobile No.",
                     style: TextStyle(
                         fontSize: 20,
@@ -151,7 +151,7 @@ class _NationalIdPageState extends State<NationalIdPage> {
                           borderRadius: BorderRadius.circular(5)),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(
+                        child: const Text(
                           "Cancel",
                           style: TextStyle(
                               fontSize: 18,

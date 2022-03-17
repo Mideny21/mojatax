@@ -38,7 +38,7 @@ class _DrivingLicensesState extends State<DrivingLicenses> {
                     width: MediaQuery.of(context).size.width * 0.5,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.grey[300],
+                      color: Colors.grey[800],
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
